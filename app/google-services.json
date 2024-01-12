@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "364139946143",
+    "project_id": "fortune-kto-tiger",
+    "storage_bucket": "fortune-kto-tiger.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:364139946143:android:30c79ff317a836423a02aa",
+        "android_client_info": {
+          "package_name": "com.ktotiger.acrashjet"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCQewhm8RTn63x8xGznx-i2vxl7JpspQlc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

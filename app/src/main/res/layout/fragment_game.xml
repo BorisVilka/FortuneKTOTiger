@@ -1,0 +1,156 @@
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg1"
+        tools:context=".GameFragment">
+
+        <ImageView
+            android:id="@+id/spin"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginBottom="16dp"
+            android:src="@drawable/go"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/plus"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="16dp"
+            android:src="@drawable/plus"
+            app:layout_constraintBottom_toBottomOf="@+id/spin"
+            app:layout_constraintStart_toEndOf="@+id/spin"
+            app:layout_constraintTop_toTopOf="@+id/spin" />
+
+        <ImageView
+            android:id="@+id/auto"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="24dp"
+            android:src="@drawable/avto"
+            app:layout_constraintBottom_toBottomOf="@+id/spin"
+            app:layout_constraintStart_toEndOf="@+id/plus"
+            app:layout_constraintTop_toTopOf="@+id/spin" />
+
+        <ImageView
+            android:id="@+id/minus"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/minus"
+            app:layout_constraintBottom_toBottomOf="@+id/spin"
+            app:layout_constraintEnd_toStartOf="@+id/spin"
+            app:layout_constraintTop_toTopOf="@+id/spin" />
+
+        <ImageView
+            android:id="@+id/turbo"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="24dp"
+            android:src="@drawable/turbo"
+            app:layout_constraintBottom_toBottomOf="@+id/spin"
+            app:layout_constraintEnd_toStartOf="@+id/minus"
+            app:layout_constraintTop_toTopOf="@+id/spin" />
+
+        <TextView
+            android:id="@+id/bet"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="10"
+            android:textColor="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.82" />
+
+        <TextView
+            android:id="@+id/win"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="@+id/bet"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.89"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="100,000"
+            android:textColor="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="@+id/bet"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.12"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginEnd="4dp"
+            android:src="@drawable/win"
+            app:layout_constraintBottom_toBottomOf="@+id/win"
+            app:layout_constraintEnd_toStartOf="@+id/win"
+            app:layout_constraintTop_toTopOf="@+id/win" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/list3"
+            android:layout_width="100dp"
+            android:layout_height="0dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="@+id/list2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/list2"
+            app:layout_constraintTop_toTopOf="@+id/list2" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/list2"
+            android:layout_width="100dp"
+            android:layout_height="0dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="@+id/list1"
+            app:layout_constraintEnd_toStartOf="@+id/list3"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/list1"
+            app:layout_constraintTop_toTopOf="@+id/list1" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/list1"
+            android:layout_width="100dp"
+            android:layout_height="330dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/list2"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.39" />
+
+        <TextView
+            android:id="@+id/win1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/font"
+            android:text="WIN!"
+            android:textColor="#FFFFFF"
+            android:textSize="60sp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
